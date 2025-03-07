@@ -1,0 +1,157 @@
+{
+    "posts": [
+      {
+        "id": "1",
+        "title": "Margherita Pizza",
+        "description": "Classic pizza with mozzarella cheese, tomatoes, and basil.",
+        "price": "12.50",
+        "image": "https://i.pinimg.com/736x/c6/bb/2b/c6bb2b10e57d256ae6d4b7b473b40e73.jpg",
+        "category": "MORNING"
+      },
+      {
+        "id": "4",
+        "title": "Vegetarian Pizza",
+        "description": "A mix of veggies like peppers, mushrooms, olives, and onions.",
+        "price": "13.00",
+        "image": "https://i.pinimg.com/736x/5b/c7/08/5bc708ff16ebfffaeb34b29f3f0523d7.jpg",
+        "category": "MORNING"
+      },
+      {
+        "id": "8",
+        "title": "Pesto Chicken Pizza",
+        "description": "A pesto base with grilled chicken, mozzarella, and sun-dried tomatoes.",
+        "price": "16.50",
+        "image": "https://i.pinimg.com/736x/23/a8/8f/23a88f93d7ee2bb46e06ee2c72d6e789.jpg",
+        "category": "MORNING"
+      },
+      {
+        "id": "19",
+        "title": "Egg Breakfast Pizza",
+        "description": "A cheesy breakfast pizza topped with fresh eggs and veggies.",
+        "price": "14.00",
+        "image": "https://i.pinimg.com/736x/5b/c7/08/5bc708ff16ebfffaeb34b29f3f0523d7.jpg",
+        "category": "MORNING"
+      },
+      {
+        "id": "20",
+        "title": "Tomato Basil Pizza",
+        "description": "Light and fresh pizza with ripe tomatoes and basil.",
+        "price": "12.00",
+        "image": "https://i.pinimg.com/736x/23/a8/8f/23a88f93d7ee2bb46e06ee2c72d6e789.jpg",
+        "category": "MORNING"
+      },
+      {
+        "id": "21",
+        "title": "Zucchini Cheese Pizza",
+        "description": "A pizza topped with zucchini, cheese, and cream sauce.",
+        "price": "15.00",
+        "image": "https://i.pinimg.com/736x/c6/bb/2b/c6bb2b10e57d256ae6d4b7b473b40e73.jpg",
+        "category": "MORNING"
+      },
+      {
+        "id": "2",
+        "title": "Pepperoni Pizza",
+        "description": "Pepperoni slices topped with mozzarella and tomato sauce.",
+        "price": "14.00",
+        "image": "https://i.pinimg.com/736x/14/51/cb/1451cb920f102af9f979a2c54b1fb62d.jpg",
+        "category": "WEEDAY LUNCH"
+      },
+      {
+        "id": "6",
+        "title": "Meat Lover's Pizza",
+        "description": "Loaded with pepperoni, sausage, bacon, and ground beef.",
+        "price": "18.00",
+        "image": "https://i.pinimg.com/736x/7d/22/55/7d2255b38d45219e05bfd4d8e53313dc.jpg",
+        "category": "WEEDAY LUNCH"
+      },
+      {
+        "id": "9",
+        "title": "Buffalo Chicken Pizza",
+        "description": "Spicy buffalo sauce, grilled chicken, and blue cheese dressing.",
+        "price": "15.50",
+        "image": "https://i.pinimg.com/736x/14/51/cb/1451cb920f102af9f979a2c54b1fb62d.jpg",
+        "category": "WEEDAY LUNCH"
+      },
+      {
+        "id": "22",
+        "title": "Sausage & Bacon Pizza",
+        "description": "A combination of sausage, bacon, and melted mozzarella cheese.",
+        "price": "17.00",
+        "image": "https://i.pinimg.com/736x/7d/22/55/7d2255b38d45219e05bfd4d8e53313dc.jpg",
+        "category": "WEEDAY LUNCH"
+      },
+      {
+        "id": "23",
+        "title": "Steak and Cheese Pizza",
+        "description": "Juicy steak slices with onions and melted cheese on pizza.",
+        "price": "19.00",
+        "image": "https://i.pinimg.com/736x/14/51/cb/1451cb920f102af9f979a2c54b1fb62d.jpg",
+        "category": "WEEDAY LUNCH"
+      },
+      {
+        "id": "24",
+        "title": "Chicken Alfredo Pizza",
+        "description": "Creamy Alfredo sauce with chicken and mozzarella cheese.",
+        "price": "16.50",
+        "image": "https://i.pinimg.com/736x/7d/22/55/7d2255b38d45219e05bfd4d8e53313dc.jpg",
+        "category": "WEEDAY LUNCH"
+      },
+      {
+        "id": "3",
+        "title": "BBQ Chicken Pizza",
+        "description": "Grilled chicken, barbecue sauce, and red onions.",
+        "price": "16.00",
+        "image": "https://i.pinimg.com/736x/84/3c/d7/843cd784d3ba849cb5daaed212e1a4fd.jpg",
+        "category": "DINNER"
+      },
+      {
+        "id": "5",
+        "title": "Hawaiian Pizza",
+        "description": "Pineapple, ham, and mozzarella on a classic pizza base.",
+        "price": "15.00",
+        "image": "https://i.pinimg.com/736x/bb/c5/ec/bbc5ec7be90e01594b4b35fd22fa52ff.jpg",
+        "category": "DINNER"
+      },
+      {
+        "id": "7",
+        "title": "Four Cheese Pizza",
+        "description": "A cheesy blend of mozzarella, cheddar, blue cheese, and parmesan.",
+        "price": "17.00",
+        "image": "https://i.pinimg.com/736x/f9/00/7f/f9007f73da46783cb255a1e621637f27.jpg",
+        "category": "DINNER"
+      },
+      {
+        "id": "10",
+        "title": "Mushroom Pizza",
+        "description": "A variety of mushrooms with truffle oil and mozzarella.",
+        "price": "14.50",
+        "image": "https://i.pinimg.com/736x/84/3c/d7/843cd784d3ba849cb5daaed212e1a4fd.jpg",
+        "category": "DINNER"
+      },
+      {
+        "id": "25",
+        "title": "Seafood Pizza",
+        "description": "Shrimps, crab meat, and mozzarella cheese with white sauce.",
+        "price": "20.00",
+        "image": "https://i.pinimg.com/736x/f9/00/7f/f9007f73da46783cb255a1e621637f27.jpg",
+        "category": "DINNER"
+      },
+      {
+        "id": "26",
+        "title": "Spinach and Ricotta Pizza",
+        "description": "Fresh spinach and ricotta cheese on a crispy crust.",
+        "price": "16.00",
+        "image": "https://i.pinimg.com/736x/bb/c5/ec/bbc5ec7be90e01594b4b35fd22fa52ff.jpg",
+        "category": "DINNER"
+      },
+      {
+        "id": "11",
+        "title": "Red Wine",
+        "description": "A rich, bold red wine with deep flavors of berries and oak.",
+        "price": "25.00",
+        "image": "https://i.pinimg.com/736x/71/b9/f0/71b9f09209868e6fca5a29e6e618712b.jpg",
+        "category": "WINES"
+      }
+    ]
+  }
+  

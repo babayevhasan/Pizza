@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- === === === === === -->
+
+    <nav class="nav">
+        <div class="navv"></div>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav2">
+            <ul>
+                <li><a href="#index">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#menu-section">MENU</a></li>
+                <a href="#index">
+                    <img src="portfolio2imagesfood/Group 2 (1).png" alt="">
+                </a>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#pages">PAGES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+
+            </ul>
+        </div>
+        <div class="nav3">
+            <button id="viewBasketBtn">Basket</button>
+            <button onclick="location.href='#reservation-section'"><i class="fas fa-calendar-alt"></i></button>
+
+        </div>
+    </nav>
+    <!-- === === === === === -->
+    <section id="index" class="index">
+        <div>
+            <p>--FRESH INGREDIENTS SOURCED GLOBALLY--</p>
+            <h1>Fusion Inspired </h1>
+            <h2>Cuisine</h2>
+            <p>Pizza. Burger. Roasted. Coffee. Wine. </p>
+            <button>Explore More</button>
+        </div>
+    </section>
+    <!-- === === === === === -->
+    <section id="about" class="OurStory">
+        <div class="OurStory-left">
+            <img src="portfolio2imagesfood/pizza1.jpg" alt="">
+        </div>
+        <div class="OurStory-right">
+            <h1>Good Food, Drinks & Company.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. </p>
+            <button id="OurStory-openModal">Explore More</button>
+        </div>
+    </section>
+
+
+    <div id="OurStory-modal" class="OurStory-modal">
+        <div class="OurStory-modal-content">
+            <span class="OurStory-close">&times;</span>
+            <div class="OurStory-modal-layout">
+                <!-- Left Side: Image -->
+                <div class="OurStory-modal-left">
+                    <img src="portfolio2imagesfood/pizza1.jpg" alt="Pizza">
+                </div>
+                <!-- Right Side: Text -->
+                <div class="OurStory-modal-right">
+                    <h2>About Our Food</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam voluptatum eveniet possimus ad odit voluptate facilis fugit. Blanditiis, minima saepe impedit at repellat laboriosam sequi incidunt reiciendis quidem, voluptas maiores.</p>
+                    <p>Our food is made with the finest ingredients and a touch of love. Come taste the difference and enjoy an unforgettable experience with friends and family!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- === === === === === -->
+
+<div id="basketModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Basket</h2>
+      <div id="basketContents"></div>
+      <div id="basketSummary"></div>
+      <button id="clearBasketBtn">Clear Basket</button>
+      <button id="continueShoppingBtn">continue shopping</button>
+      <button id="checkoutBtn">Pay</button>
+    </div>
+  </div>
+  
+    <!-- === === === === === === -->
+
+    <section id="menu-section" class="menu">
+        <div class="menu1">
+            <p>Our Menu</p>
+            <h1>RESTAURANT MENU</h1>
+            <img src="portfolio2imagesfood/Vector (1).png" alt="">
+        </div>
+        <div class="menu2">
+            <hr>
+            <ul>
+                <li><a href="#" class="category" data-category="ALL">ALL</a></li>
+                <li><a href="#" class="category" data-category="MORNING">MORNING</a></li>
+                <li><a href="#" class="category" data-category="WEEDAY LUNCH">WEEDAY LUNCH</a></li>
+                <li><a href="#" class="category" data-category="DINNER">DINNER</a></li>
+                <li><a href="#" class="category" data-category="WINES">WINES</a></li>
+            </ul>
+            <hr>
+        </div>
+        <div class="menu3" id="menu-cards"></div>
+        <div class="menu4">
+            <p>Our menu changes regularly, to bring the best experience to you</p>
+            <button>View All</button>
+        </div>
+    </section>
+
+    <section id="reservation-section" class="reservation-section">
+            <div class="reservation-form">
+                <h2>ONLINE RESERVATION</h2>
+                <p>Please fill out the order form</p>
+                <form onsubmit="return checkForm();">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group">
+                        <label>Person</label>
+                        <select>
+                            <option>1 Person</option>
+                            <option>2 People</option>
+                            <option>3 People</option>
+                            <option>4 People</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time</label>
+                        <input type="time" value="19:00" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="reservation-btn">BOOK A TABLE →</button>
+            </form>
+        </div>
+        <!-- Visit Us Section -->
+        <div class="visit-us">
+            <h2>VISIT US</h2>
+            <div class="visit-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Main Boulevard 7292 New York</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock icon"></i>
+                    <div>
+                        <h4>Open Everyday</h4>
+                        <p>08 am - 11 pm</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone icon"></i>
+                    <div>
+                        <h4>Book through call</h4>
+                        <p>+84 1800 335 5596</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- === === === === === -->
+    <section id="blog" class="customers">
+        <div class="customer1">
+            <p>Happy customer</p>
+            <h1>Happy customer</h1>
+            <img src="portfolio2imagesfood/Vector (1).png" alt="">
+        </div>
+        <div class="customer2">
+            <div>
+                <img src="portfolio2imagesfood/quotes.png" alt="">
+                <p>“Great food at reasonable prices. Great service and the owners are terrific. This was my first time
+                    to visit this restaurant, but it will not be my last!”</p>
+                <img src="portfolio2imagesfood/Star.png" alt="">
+                <div class="profile-div">
+                    <img class="customer-profile"
+                    src="portfolio2imagesfood/man-professional-business-casual-young-avatar-icon-illustration_1277826-622.avif"
+                    alt="">
+                    <h6>Marry Ellen</h6>
+                </div>
+            </div>
+            <div>
+                <img src="portfolio2imagesfood/quotes.png" alt="">
+                <p>“Great food at reasonable prices. Great service and the owners are terrific. This was my first time
+                    to visit this restaurant, but it will not be my last!”</p>
+                <img src="portfolio2imagesfood/Star.png" alt="">
+                <div class="profile-div">
+                    <img class="customer-profile"
+                        src="portfolio2imagesfood/man-professional-business-casual-young-avatar-icon-illustration_1277826-622.avif"
+                        alt="">
+                    <h6>Marry Ellen</h6>
+                </div>
+            </div>
+            <div>
+                <img src="portfolio2imagesfood/quotes.png" alt="">
+                <p>“Great food at reasonable prices. Great service and the owners are terrific. This was my first time
+                    to visit this restaurant, but it will not be my last!”</p>
+                <img src="portfolio2imagesfood/Star.png" alt="">
+                <div class="profile-div">
+                    <img class="customer-profile"
+                        src="portfolio2imagesfood/man-professional-business-casual-young-avatar-icon-illustration_1277826-622.avif"
+                        alt="">
+                    <h6>Marry Ellen</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- === === === === === -->
+    <section id="pages" class="chef">
+        <div class="chef1">
+            <p>Amazing Team</p>
+            <h1>Meet our chef</h1>
+            <img src="portfolio2imagesfood/Vector (1).png" alt="">
+        </div>
+        <div class="chef2">
+            <div class="chef2-prof" data-chef="ron">
+                <div class="chef-img-div">
+                    <img src="portfolio2imagesfood/man-professional-business-casual-young-avatar-icon-illustration_1277826-622.avif"
+                        alt="">
+                </div>
+                <div class="chef-pp">
+                    <h1>Ron William</h1>
+                    <p>CHEF</p>
+                </div>
+            </div>
+            <div class="chef2-prof" data-chef="chester">
+                <div class="chef-img-div">
+                    <img src="portfolio2imagesfood/770103_man_512x51-3.png" alt="">
+                </div>
+                <div class="chef-pp">
+                    <h1>Chester Rodrigues</h1>
+                    <p>ASSISTANT CHEF</p>
+                </div>
+            </div>
+            <div class="chef2-prof" data-chef="rafael">
+                <div class="chef-img-div">
+                    <img src="portfolio2imagesfood/male-profile-avatar-with-brown-hair-vector-2.jpg" alt="">
+                </div>
+                <div class="chef-pp">
+                    <h1>Rafael Leo</h1>
+                    <p>SECOND CHEF</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div id="chef-modal-ron" class="chef-modal">
+        <div class="chef-modal-content">
+            <span class="chef-modal-close">&times;</span>
+            <div class="chef-modal-layout">
+                <div class="chef-modal-left">
+                    <img src="portfolio2imagesfood/man-professional-business-casual-young-avatar-icon-illustration_1277826-622.avif" alt="Ron William">
+                </div>
+                <div class="chef-modal-right">
+                    <h2>Ron William</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ron is our lead chef, specialized in Italian cuisine.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="chef-modal-chester" class="chef-modal">
+        <div class="chef-modal-content">
+            <span class="chef-modal-close">&times;</span>
+            <div class="chef-modal-layout">
+                <div class="chef-modal-left">
+                    <img src="portfolio2imagesfood/770103_man_512x51-3.png" alt="Chester Rodrigues">
+                </div>
+                <div class="chef-modal-right">
+                    <h2>Chester Rodrigues</h2>
+                    <p>Chester is our Assistant Chef with a flair for baking the perfect desserts and pastries.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="chef-modal-rafael" class="chef-modal">
+        <div class="chef-modal-content">
+            <span class="chef-modal-close">&times;</span>
+            <div class="chef-modal-layout">
+                <div class="chef-modal-left">
+                    <img src="portfolio2imagesfood/male-profile-avatar-with-brown-hair-vector-2.jpg" alt="Rafael Leo">
+                </div>
+                <div class="chef-modal-right">
+                    <h2>Rafael Leo</h2>
+                    <p>Rafael is our Second Chef, bringing Brazilian flavors to life in every dish he prepares.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === === === === === -->
+    <!-- === === === === === -->
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>IMPORTANT LINKS</h3>
+                <ul>
+                    <li>Favorite Place</li>
+                    <li>Our History</li>
+                    <li>Contact Us</li>
+                    <li>Places To Get Lost</li>
+                    <li>Our Brand</li>
+                </ul>
+            </div>
+
+            <div class="footer-center">
+                <div class="footer-logo">
+                    <img src="portfolio2imagesfood/Group 2 (1).png" alt="">
+                    <p>Food & Drinks</p>
+                </div>
+                <p>84 Valley View Street, Monsey, NY</p>
+                <p><span class="footer-phone">+ (03) 5333 5036</span></p>
+                <p>cornert@domain.com</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>FAVORITE PICKS</h3>
+                <ul>
+                    <li>Cafe Latte</li>
+                    <li>Esspresso</li>
+                    <li>Cafe Americano</li>
+                    <li>Ice Coffee</li>
+                    <li>Mocha een</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

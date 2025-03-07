@@ -1,0 +1,1657 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222A3F;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav2 ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav2 a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav2 a:hover {
+    color: #FF7C57;
+}
+
+.nav3 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav3 i {
+    color: #fff;
+    font-size: 20px;
+}
+
+#viewBasketBtn {
+    padding: 12px 10px;
+}
+
+.nav3 button {
+    background-color: #FF7C57;
+    color: white;
+    border: none;
+    padding: 10px 0px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.nav3 button:hover {
+    background-color: #e06745;
+}
+
+.fa-calendar-alt {
+    padding: 0px 10px;
+}
+
+/* === === */
+.index {
+    text-align: center;
+    background-color: rgb(53, 53, 53);
+    padding: 230px 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('portfolio2imagesfood/pizza4.jpg');
+    background-size: contain;
+}
+
+.index p {
+    color: rgba(255, 124, 87, 1);
+}
+
+.index button {
+    margin: 20px 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 124, 87, 1);
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.index button:hover {
+    background-color: #cf5d3d;
+}
+
+.index h1 {
+    font-size: 80px;
+    color: white;
+}
+
+.index h2 {
+    color: white;
+    font-size: 60px;
+}
+
+/* === === */
+.OurStory {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    background-image: url(portfolio2imagesfood/shape.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 140px 0px;
+}
+
+.OurStory-left {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    padding: 40px 0px;
+}
+
+.OurStory-left img {
+    width: 50%;
+}
+
+.OurStory-right {
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+.OurStory-right h1 {
+    font-size: 40px;
+    width: 50%;
+}
+
+.OurStory-right p {
+    color: gray;
+    width: 60%;
+}
+
+.OurStory-right button {
+    margin: 20px 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 124, 87, 1);
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.OurStory-right button:hover {
+    background-color: #cf5d3d;
+}
+
+
+
+
+
+
+
+/* Modal Default Hidden */
+.OurStory-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+    /* Scroll for long content */
+}
+
+/* Modal Content Box */
+.OurStory-modal-content {
+    position: relative;
+    margin: 5% auto;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Close Button Style */
+.OurStory-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.OurStory-close:hover {
+    color: #d61010;
+}
+
+/* Modal Layout */
+.OurStory-modal-layout {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: stretch;
+}
+
+/* Left Side: Image Styling */
+.OurStory-modal-left {
+    /* flex: 1; */
+    background-color: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.OurStory-modal-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Right Side: Text Styling */
+.OurStory-modal-right {
+    /* flex: 2; */
+    padding: 20px;
+    text-align: left;
+}
+
+.OurStory-modal-right h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #d61010;
+}
+
+.OurStory-modal-right p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* ======= */
+.menu {
+    width: 100%;
+    height: auto;
+    background-image: url(portfolio2imagesfood/bg\ menu.png);
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu1 {
+    padding: 50px 0px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.menu1 p {
+    color: #FF7C57;
+}
+
+.menu1 h1 {
+    color: white;
+    font-size: 35px;
+}
+
+.menu2 {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 40px 0px;
+}
+
+.menu2 ul {
+    display: flex;
+    justify-content: center;
+}
+
+.menu2 ul li {
+    padding: 20px 50px;
+    list-style-type: none;
+}
+
+.menu2 hr {
+    opacity: 0.2;
+    margin: auto;
+    width: 50%;
+}
+
+.menu2 a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.menu2 a:hover {
+    color: #FF7C57;
+}
+
+.menu3 {
+    width: 80%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    padding: 10px 10px;
+    text-align: center;
+    width: 22%;
+    height: 300px;
+    border: #ffffff solid 1px;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card:hover {
+    border: #FF7C57 solid 1px;
+}
+
+
+.propss {
+    padding: 20px 0px;
+    display: flex;
+    /* gap: 50px; */
+}
+
+.propss h4 {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.propss p {
+    /* color: #FF7C57; */
+    font-size: 16px;
+}
+
+.propss-two {
+    display: flex;
+    gap: 50px;
+}
+
+.propss-two p {
+    color: gray;
+    font-size: 12px;
+}
+
+.propss-two button {
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 124, 87, 1);
+    visibility: hidden;
+    padding: 0px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.propss-two button:hover {
+    background-color: #cf5d3d;
+}
+
+
+.card:hover .propss-two button {
+    visibility: visible;
+}
+
+.menu4 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.menu4 p {
+    color: gray;
+}
+
+.menu4 button {
+    margin: 20px 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 124, 87, 1);
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.menu4 button:hover {
+    background-color: #cf5d3d;
+}
+
+/* === === */
+.customers {
+    width: 100%;
+    background-image: url(portfolio2imagesfood/shape.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.customer1 {
+    text-align: center;
+}
+
+.customer1 h1 {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+
+.customer1 p {
+    color: #FF7C57;
+    margin: 20px 0px;
+}
+
+.customer1 img {
+    margin: 20px 0px;
+}
+
+.customer2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+}
+
+.customer2 div {
+    padding: 20px 0px;
+    text-align: center;
+    width: 25%;
+    background-color: #222A3F;
+
+}
+
+.customer2 p {
+    color: white;
+    width: 70%;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+.customer2 h6 {
+    color: white;
+    font-size: 15px;
+    margin: 20px 0px;
+}
+
+.customer-profile {
+    width: 50%;
+    border-radius: 100%;
+}
+
+.profile-div {
+    margin: auto;
+}
+
+/* === === */
+.chef {
+    max-width: 1100px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.chef1 p {
+    color: #FF7C57;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chef1 h1 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.chef1 img {
+    width: 240px;
+    margin-top: 10px;
+}
+
+.chef2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.chef2-prof {
+    width: 25%;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+    background-color: #223144;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chef-img-div img {
+    width: 100%;
+    height: 100%;
+}
+
+.chef-pp {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.chef-pp h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.chef-pp p {
+    color: #FF7C57;
+    font-weight: bold;
+}
+
+.chef2-prof:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.chef2-prof:hover .chef-pp {
+    background-color: rgba(255, 124, 87, 0.9);
+}
+
+.chef2-prof:hover h1,
+.chef2-prof:hover p {
+    color: #fff;
+}
+
+/* Modal Default Hidden */
+.chef-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.chef-modal-content {
+    position: relative;
+    margin: 5% auto;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.chef-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.chef-modal-close:hover {
+    color: #d61010;
+}
+
+.chef-modal-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.chef-modal-left {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chef-modal-left img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.chef-modal-right {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+.chef-modal-right h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #d61010;
+}
+
+.chef-modal-right p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* === === */
+.reservation-section {
+    display: flex;
+    max-width: 1100px;
+    margin: 100px auto;
+    border: solid 1px black;
+    background-image: url(portfolio2imagesfood/shape.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.reservation-form {
+    width: 60%;
+    padding: 30px;
+}
+
+.reservation-form h2,
+.visit-us h2 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.reservation-form p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00076f;
+    border-radius: 4px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+
+.reservation-btn {
+    background-color: #FF7C57;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin: 20px auto;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.reservation-btn:hover {
+    background-color: #e06745;
+}
+
+
+.visit-us {
+    width: 40%;
+    background-color: #223144;
+    color: #fff;
+    padding: 30px;
+    background-image: url(portfolio2imagesfood/bg\ menu.png);
+    background-size: contain;
+}
+
+.visit-us h2 {
+    margin-bottom: 30px;
+}
+
+.visit-info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.visit-info .icon {
+    font-size: 24px;
+}
+
+.info-item h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.info-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* === === */
+.footer {
+    background-color: #222;
+    color: #ffffff;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+}
+
+.footer-section {
+    width: 30%;
+    padding: 40px 0px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.footer-section li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-section li:hover {
+    color: #ff7c57;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-center img {
+    margin: 10px 0px;
+}
+
+.footer-center .footer-logo p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-center p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer-social a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ff7c57;
+}
+
+.footer-phone {
+    color: #ff7c57;
+    font-weight: bold;
+}
+
+/* === === MODAL === === */
+
+/* Modal Ayarları */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: auto; */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Yumuşak kararma */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Kapatma butonu */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#basketContents {
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.basket-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.remove-btn {
+    background-color: #ff7c57;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.remove-btn:hover {
+    background-color: #ff7c57;
+}
+
+/* Sepeti boşalt butonu */
+#clearBasketBtn {
+    background-color: #ff7c57;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#clearBasketBtn:hover {
+    background-color: #dd6d4e;
+}
+
+
+
+.basket-item button {
+    padding: 5px 10px;
+    background-color: #dd6d4e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 2px;
+    font-size: 14px;
+}
+
+.basket-item button:hover {
+    background-color: #dd6d4e;
+}
+
+.basket-item button {
+    display: inline-block;
+    margin: 2px 5px;
+}
+
+.basket-item button:active {
+    transform: scale(0.95);
+}
+
+.basket-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.basket-item img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+#continueShoppingBtn {
+    padding: 10px;
+    background-color: #ff7c57;
+    color: white;
+    border: none;
+    margin: 5px 0px;
+}
+
+#checkoutBtn {
+    padding: 10px;
+    background-color: #ff7c57;
+    color: white;
+    border: none;
+    margin: 5px 0px;
+}
+
+
+/* ===== RESPONSIVE=====RESPONSIVE=====RESPONSIVE=====RESPONSIVE===== */
+
+@media (min-width: 2000px) and (max-width: 2600px) {
+    .nav2 ul li {
+        font-size: 30px;
+    }
+
+    .nav2 ul {
+        gap: 100px;
+    }
+
+    .nav2 img {
+        width: 150px;
+    }
+
+    .nav3 i {
+        font-size: 30px;
+    }
+
+    .index {
+        height: 100vh;
+    }
+
+    .index p {
+        margin: 40px 0px;
+        font-size: 30px;
+    }
+
+    .index h1 {
+        font-size: 100px;
+    }
+
+    .index button {
+        font-size: 30px;
+    }
+
+    /* === */
+    .OurStory {
+        height: 100vh;
+    }
+
+    .OurStory-right h1 {
+        font-size: 60px;
+        width: 85%;
+    }
+
+    .OurStory-right p {
+        font-size: 25px;
+    }
+
+    .OurStory-right button {
+        font-size: 30px;
+    }
+
+    /* === */
+    .menu1 p {
+        font-size: 30px;
+    }
+
+    .menu1 h1 {
+        font-size: 50px;
+    }
+
+    .menu1 img {
+        margin: 30px 0px;
+    }
+
+    .menu2 ul {
+        gap: 100px;
+    }
+
+    .menu2 li {
+        font-size: 22px;
+    }
+
+    .menu3 {
+        min-height: 40vh;
+    }
+
+    .menu3 .card p {
+        font-size: 25px;
+    }
+
+    .menu3 .card h4 {
+        font-size: 30px;
+    }
+
+    .menu3 .card {
+        height: 350px;
+    }
+
+    .menu4 p {
+        font-size: 30px;
+    }
+
+    .menu4 button {
+        font-size: 30px;
+    }
+
+    /* === */
+    .customer1 p {
+        font-size: 30px;
+    }
+
+    .customer2 p {
+        font-size: 30px;
+    }
+
+    .customer2 h6 {
+        font-size: 25px;
+    }
+
+    /* === */
+    .chef1 p {
+        font-size: 30px;
+    }
+
+    .chef1 h1 {
+        font-size: 50px;
+    }
+
+    .chef1 img {
+        width: 200px;
+    }
+
+    /* === */
+    footer li {
+        font-size: 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 30px;
+    }
+
+    .footer-center img {
+        width: 200px;
+    }
+
+    .footer-center p {
+        font-size: 20px;
+    }
+}
+
+/* ===== RESPONSIVE=====RESPONSIVE=====RESPONSIVE=====RESPONSIVE===== */
+@media (min-width: 800px) and (max-width: 1100px) {
+    .nav3 i {
+        font-size: 15px;
+    }
+
+    .nav2 img {
+        width: 100px;
+    }
+
+    .nav2 li {
+        font-size: 15px;
+    }
+
+    /* === */
+    .index h1 {
+        font-size: 60px;
+    }
+
+    /* === */
+    .OurStory {
+        height: 50vh;
+    }
+
+    .OurStory-left img {
+        width: 70%;
+    }
+
+    .OurStory-right h1 {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .OurStory-right p {
+        width: 80%;
+        font-size: 15px;
+    }
+
+    /* === */
+    .menu2 ul li {
+        font-size: 15px;
+    }
+
+    .card {
+        width: auto;
+    }
+
+    /* === */
+    .customer2 div p {
+        font-size: 15px;
+    }
+
+    /* === */
+    .chef {
+        width: 90%;
+    }
+
+    .chef1 img {
+        width: 30%;
+    }
+
+    /* === */
+    .reservation-section {
+        width: 90%;
+        /* background-color: red; */
+    }
+}
+
+/* ===== RESPONSIVE=====RESPONSIVE=====RESPONSIVE=====RESPONSIVE===== */
+@media (min-width: 650px) and (max-width: 799px) {
+    .navv {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav2 {
+        display: none;
+        position: absolute;
+        top: 35px;
+        left: 0px;
+        background-color: #222A3F;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav2 img {
+        display: none;
+    }
+
+    .nav2.active {
+        display: flex;
+    }
+
+    .nav2 ul {
+        flex-direction: column;
+        gap: 25px;
+        font-size: 20px;
+    }
+
+    /* === */
+    .OurStory {
+        display: block;
+        text-align: center;
+    }
+
+    .OurStory-left {
+        width: 100%;
+    }
+
+    .OurStory-right {
+        width: 100%;
+    }
+
+    .OurStory-right h1 {
+        font-size: 40px;
+        margin: auto;
+    }
+
+    .OurStory-right p {
+        font-size: 20px;
+        margin: 20px auto;
+    }
+
+    /* === */
+    .menu2 ul li {
+        font-size: 15px;
+        padding: 0px 10px;
+    }
+
+    .menu3 .card {
+        height: auto;
+        width: 40%;
+    }
+
+    /* === */
+    .customer1 p {
+        font-size: 20px;
+    }
+
+    .customer2 {
+        display: block;
+        /* margin:auto; */
+    }
+
+    .customer2 div {
+        margin: 30px auto;
+        width: 60%;
+    }
+
+    /* === */
+    .chef1 img {
+        width: 35%;
+    }
+
+    .chef2 {
+        width: 100%;
+        display: block;
+    }
+
+    .chef2 div {
+        margin: 20px auto;
+    }
+    .chef-modal-left{
+        flex: none;
+    }
+    /* === */
+    .reservation-section {
+        display: block;
+        width: 80%;
+        /* background-color: red; */
+    }
+
+    .reservation-form {
+        width: 100%;
+        /* background-color: green; */
+    }
+
+    .visit-us {
+        width: 100%;
+
+    }
+}
+
+/* ===== RESPONSIVE=====RESPONSIVE=====RESPONSIVE=====RESPONSIVE===== */
+@media (min-width: 400px) and (max-width: 649px) {
+    .burger {
+        display: flex;
+        /* Burger ikonu göster */
+    }
+
+    .navv {
+        display: none;
+    }
+
+    .nav2 img {
+        display: none;
+    }
+
+    .nav2 {
+        display: none;
+        /* Menüyü gizle */
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background-color: #222A3F;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav2.active {
+        display: flex;
+        /* Menü açıldığında göster */
+    }
+
+    .nav2 ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* === */
+    .index h1 {
+        font-size: 50px;
+    }
+
+    .index h2 {
+        font-size: 40px;
+    }
+
+    /* === */
+    .menu2 ul li {
+        font-size: 12px;
+        padding: 0px 10px;
+    }
+
+    /* === */
+    .OurStory {
+        display: block;
+        text-align: center;
+    }
+
+    .OurStory-left {
+        width: 100%;
+    }
+
+    .OurStory-right {
+        width: 100%;
+    }
+
+    .OurStory-right h1 {
+        width: 80%;
+        margin: 30px auto;
+        font-size: 40px;
+    }
+
+    .OurStory-right p {
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .OurStory-modal-right {
+        text-align: center;
+    }
+
+    .OurStory-modal-layout {
+        display: block;
+    }
+
+    /* === */
+    .menu2 ul li {
+        font-size: 12px;
+        padding: 0px 10px;
+    }
+
+    .menu3 .card {
+        height: auto;
+        width: 55%;
+    }
+
+    .menu4 p {
+        margin: auto;
+        width: 80%;
+    }
+
+    /* === */
+    .customer1 p {
+        font-size: 20px;
+    }
+
+    .customer2 {
+        display: block;
+    }
+
+    .customer2 div {
+        margin: 30px auto;
+        width: 60%;
+    }
+
+    /* === */
+    .chef1 img {
+        width: auto;
+    }
+
+    .chef2 {
+        width: 100%;
+        display: block;
+    }
+
+    .chef2-prof {
+        width: 50%;
+    }
+
+    .chef2 div {
+        margin: 20px auto;
+    }
+    .chef-modal-left{
+        flex: none;
+    }
+
+    /* === */
+    .reservation-section {
+        display: block;
+        width: 80%;
+    }
+
+    .reservation-form {
+        width: 100%;
+    }
+
+    .visit-us {
+        width: 100%;
+
+    }
+
+    /* === */
+    footer li {
+        font-size: 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 15px;
+    }
+
+    .footer-center img {
+        width: 80px;
+    }
+
+    .footer-center p {
+        font-size: 10px;
+    }
+}
+
+/* ===== RESPONSIVE=====RESPONSIVE=====RESPONSIVE=====RESPONSIVE===== */
+@media (max-width: 399px) {
+    .burger {
+        display: flex;
+        /* Burger ikonu göster */
+    }
+
+    .navv {
+        display: none;
+    }
+
+    .nav2 img {
+        display: none;
+    }
+
+    .nav2 {
+        display: none;
+        /* Menüyü gizle */
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background-color: #222A3F;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav2.active {
+        display: flex;
+    }
+
+    .nav2 ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /*=== === */
+    .index h1 {
+        font-size: 35px;
+    }
+
+    .index p {
+        font-size: 15px;
+    }
+
+    .index h2 {
+        font-size: 40px;
+    }
+
+    /* === */
+    .menu2 ul li {
+        font-size: 12px;
+        padding: 0px 10px;
+    }
+
+    /* === */
+    .OurStory {
+        display: block;
+        text-align: center;
+    }
+
+    .OurStory-left {
+        width: 100%;
+    }
+
+    .OurStory-right {
+        width: 100%;
+    }
+
+    .OurStory-right h1 {
+        width: 90%;
+        margin: 30px auto;
+        font-size: 40px;
+    }
+
+    .OurStory-right p {
+        margin: auto;
+        width: 80%;
+        font-size: 15px;
+    }
+
+    .OurStory-modal-right {
+        text-align: center;
+    }
+
+    .OurStory-modal-layout {
+        display: block;
+    }
+
+    /* === */
+    .menu2 ul li {
+        font-size: 12px;
+        padding: 0px 10px;
+    }
+
+    .menu3 .card {
+        height: auto;
+        width: 55%;
+    }
+
+    .menu4 p {
+        margin: auto;
+        width: 80%;
+    }
+
+    /* === */
+    .customer1 p {
+        font-size: 20px;
+    }
+
+    .customer2 {
+        display: block;
+    }
+
+    .customer2 div {
+        margin: 30px auto;
+        width: 60%;
+    }
+
+    /* === */
+    .chef1 img {
+        width: auto;
+    }
+
+    .chef2 {
+        width: 100%;
+        display: block;
+    }
+
+    .chef2-prof {
+        width: 50%;
+    }
+
+    .chef2 div {
+        margin: 20px auto;
+    }
+    .chef-modal-left{
+        flex: none;
+    }
+    /* === */
+    .reservation-section {
+        display: block;
+        width: 100%;
+    }
+
+    .reservation-form {
+        width: 100%;
+    }
+
+    .visit-us {
+        width: 100%;
+
+    }
+
+    /* === */
+    footer li {
+        font-size: 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 15px;
+    }
+
+    .footer-center img {
+        width: 80px;
+    }
+
+    .footer-center p {
+        font-size: 10px;
+    }
+
+}
